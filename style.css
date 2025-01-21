@@ -1,0 +1,515 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'popines', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    color: #ededed;
+    background: black;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 10%;
+    padding-bottom: 20px;
+    padding-right: 10%;
+    background: rgba(72, 2, 2, 0.637);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+    position: relative;
+    font-size: 30px;
+    columns: #ffff;
+    text-decoration: none ;
+    color: rgb(255, 0, 0);
+    font-weight: 700;
+    color: black;
+    text-shadow: -1px 1px 0 #ff0000,
+    1px 1px 0 #ff0000,1px -1px 0 #ff0000,
+    -1px -1px 0 #ff0000;
+    transition: all ease 0.5s;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+@keyframes slideRight {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+.logotxt{
+    position: relative;
+    font-size: 30px;
+    columns: #ffff;
+    text-decoration: none ;
+    color: rgb(255, 0, 0);
+    font-weight: 700;
+}
+
+.navbar a{
+    display: inline-block;
+    font-size: 25px;
+    color: #ffff;
+    text-decoration: none;
+    font-weight: 500px;
+    margin-left: 35px;
+    transition: 0.3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.navbar a:hover{
+    color: rgb(255, 0, 0);
+}
+.home{
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: black;
+    background-image: url('p6.jpg');
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    background-size: 24%;
+    background-position:260mm;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+.home-content{
+    max-width: 600px;
+}
+.home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+@keyframes slideBottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translatey(0px);
+        opacity: 1;
+    }
+}
+.home-content h3:nth-of-type(2){
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+}
+.home-content h1{
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+.home-content p{
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+    margin-top: 25px;
+}
+@keyframes slideLeft {
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translatex(0px);
+        opacity: 1;
+    }
+}
+.home-sci{
+    display: flex;
+
+}
+.home-sci a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    text-decoration: none;
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 50%;
+    font-size: 20px;
+    color: rgb(255, 0, 0);
+    margin: 30px 15px 30px 0;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s *var(--i));
+    transition: .5s ease;
+}
+.home-sci a:hover{
+    background-color: rgb(255, 0, 0);
+    color: #ededed;
+    box-shadow: 0 0 20px red;
+}
+.buttons li{
+    margin-right: 50px;
+}
+.button-box{
+    display: inline-flex;
+    padding: 9px 20px;
+    background:red;
+    border-radius: 40px;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 600;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s *var(--i));
+    transition: .5s ease;
+    box-shadow: 0 0 5px red,
+    0 0 25px red;
+    list-style: none;
+}
+.buttons :first-child{
+    margin-left: -25px;
+}
+.button-box:hover{
+    box-shadow: 0 0 5px red,
+    0 0 25px red, 0 0 50px red,
+    0 0 100px rgb(255, 0, 0);
+    background-color: #ff0000;
+}
+.textdec{
+    color: black;
+    text-shadow: -1px 1px 0 #ff0000,
+    1px 1px 0 #ff0000,1px -1px 0 #ff0000,
+    -1px -1px 0 #ff0000;
+    font-size: 40px;
+    transition: all ease 0.5s;
+    
+}
+.textdec:hover{
+    
+                         color: rgb(58, 255, 3);
+    text-shadow: 0 0 10px rgb(255, 0, 0),
+    0 0 25px rgb(255,0,0), 
+    0 0 50px rgb(255,0,0), 0 0 100px rgb(255, 0, 0);
+}
+.about{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 1.5rem;
+}
+.about-img img{
+    max-width: 400px;
+    height: 50%;
+    width: 90%;
+    font-size: 50px;
+    padding-left: 100px;   
+}
+
+.about-text h2{
+    padding-top: 100px;
+    font-size: 50px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay:.7s;
+    font-weight: 600;
+}
+.about-text h2 span{
+    color: rgb(255,0,0);
+    font-weight: 600;
+}
+.about-text h4{
+    font-size: 45px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 10px;
+    opacity: 0;
+    animation: slideTop 1.5s ease forwards;
+    animation-delay:.7s;
+}
+.about-text p{
+    color: aliceblue;
+    font-size: 18px;
+    margin-bottom: 4rem;
+    text-transform: capitalize;
+    opacity: 0;
+    animation: slideLeft 1.5s ease forwards;
+    animation-delay:.7s;
+} 
+.about-text a{
+    margin-top: -40px;
+}
+.skills{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+    padding: 90px;
+}
+.skill-title h2{ 
+    text-align: center;
+    font-size: 50px;
+    padding-bottom: 70px;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay:.7s;
+}
+.skill-title span{
+    color: red;
+    font-weight: 600;
+}
+.skill-list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 70px;
+    margin-top:50px;
+}
+.list{
+    background-color: transparent;
+    padding: 48px;
+    font-size: 13px;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px rgb(255, 0, 0),
+    1px 1px 40px rgb(242, 7, 7);
+}
+.list:hover{
+    transform:translateY(-10px);
+}
+.list i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.list h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.list a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.read{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #ff0000;
+    border-radius: 40px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards; 
+    animation-delay: 2s;
+    box-shadow: 0 0 5px red, 0 0 25px red;
+}
+.read:hover{
+    background-color: red;
+    color: #f6f2f2;
+    box-shadow: 0 0 20px red;
+}
+.research-projects{
+    margin: 30px;
+}
+.research-title{
+    text-align: center;
+    font-size: 50px;
+    padding-bottom: 20px;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay:.7s;
+}
+.research-title h2{
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+    font-size: 50px;
+}
+.research-title span{
+    color: #ff0000;
+    font-weight: 600;
+}
+.papers-container{
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    background-color: transparent;
+}
+.paperlist i{
+    font-size: 50px;
+    margin: 20px 0pc 10px 50px;
+    color: #ff0000;
+    animation: slideTop 1.5s ease forwards;
+    animation-delay:.7s;
+} 
+.paperlist{
+    border: 2px solid red;
+    margin: 30px;
+    border-radius: 40px;
+    padding: 5px;
+    box-shadow: 10px 10px 10px 5px red;
+}
+.paperlist h3{
+    color: aliceblue;
+    font-weight: 600;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slideLeft .6s ease forwards;
+    animation-delay:.5s;
+}
+.paperlist p{
+    color: aliceblue;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slideBottom 1.5s ease forwards;
+    animation-delay:.5s;
+}
+.browse{
+    color: rgb(222, 243, 243);
+    background-color: #ff0000;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:30px 0px 30px 40%;
+    text-decoration: none;
+    padding: 20px;
+    width: 25%;
+    border-radius: 60px;
+    opacity: 0;
+    animation: slideLeft 1.5s ease forwards;
+    animation-delay:.5s;
+    box-shadow: 0 0 20px red;
+}
+.browse:hover{
+    background-color: red;
+    color: #ffffff;
+    box-shadow: 0 0 5px red, 0 0 25px red,
+    0 0 50px red, 0 0 100px red;
+}
+.form{
+    margin: 50px 200px 200px 200px;
+    border: 2px solid red;
+    padding: 100px 50px 50px 50px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 5px red,
+    0 0 25px red, 0 0 50px red,
+    0 0 100px rgb(255, 0, 0);
+    border-radius: 50px;
+}
+.form-title h2{
+    font-size: 50px;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 160px;
+}
+.form-title span{
+    color: red;
+    font-weight: 600;
+}
+.form-control{
+      background: white;
+      border: 3px solid red;
+      margin: 20px;
+      border-radius: 30px;
+}
+.formstyle{
+    font-size: 20px;
+}
+.form-label{
+    padding-left: 30px;
+}
+.brows{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40%;
+    margin-right: 40%;
+    border: 2px solid red;
+    background-color: #ff0000;
+    border-radius: 20px;
+    padding: 10px;
+    opacity: 0;
+    animation: slideLeft 1.5s ease forwards;
+    animation-delay:.5s;
+    box-shadow: 0 0 20px red;
+}
+.brows a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.brows:hover{
+    background-color: red;
+    color: #ffffff;
+    box-shadow: 0 0 5px red, 0 0 25px red,
+    0 0 50px red, 0 0 100px red;
+}
+
+.footerref{
+    background-color: rgb(45, 40, 40);
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: start;
+}
+.footertitle a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+}
+.footertitle a:hover{
+    color: rgb(230, 30, 30);
+    text-decoration:underline;
+}
+.footertitle2 p{
+    margin-top: 60%;
+}
+.logo1{
+    color: rgb(255, 0, 0);
+    font-size: 30px;
+    text-shadow: 2px 2px 5px red;
+    text-decoration: none;
+}
